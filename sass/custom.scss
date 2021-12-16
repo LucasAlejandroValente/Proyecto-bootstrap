@@ -1,0 +1,208 @@
+$font-family-base: 'Lora', serif;
+
+$primary: #F6A5B5;
+$bg-light: #FCF8F2;
+$secondary: #FBE6CC;
+$accent: #e6899b;
+$info: #81676A;
+
+// PERSONALIZACIÓN DEL NAVBAR
+
+$navbar-light-brand-color: $primary;
+$navbar-light-brand-hover-color: $accent;
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $accent;
+$navbar-light-active-color: $accent;
+
+
+// CAROUSEL
+
+.carousel-inner img{
+    height: 100%;
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.carousel-caption h2{
+    font-size: 400%;
+}
+
+.carousel-caption p{
+    font-size: 200%;
+}
+
+// MEDIA QUERIES - CAROUSEL
+
+@media screen and (max-width: 992px){
+
+    .carousel-caption h2{
+        font-size: 200%;
+    }
+    
+    .carousel-caption p{
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px){
+
+    .carousel-caption h2{
+        font-size: 300%;
+    }
+    
+    .carousel-caption p{
+        font-size: 150%;
+    }
+}
+
+// CONTENIDO
+
+.contenido1 h3, .contenido2 h3{
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: #FBE6CC;
+    color: #81676A;
+    max-width: 600px;
+  }
+
+  .contenido1 h3{
+      margin-top: 8px;
+  }
+
+.imgcontainer img{
+    border-radius: 40px;
+}
+
+// HEADER
+
+header{
+    background-color: $primary;
+}
+
+//NEWSLETTER
+
+.highlight-text{
+    color: $primary;
+}
+
+.newsletter{
+    position: relative;
+    display: inline-block;
+    padding: 20px 0px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+
+.newsletter form{
+        margin: 0px auto;
+        max-width: 600px;
+}
+.newsletter p{
+    font-size: 36px;
+    text-align: center;
+}
+
+.newsletter input{
+    float: left;
+    padding: 15px 20px;
+    margin: 30px 10px;
+    box-sizing: border-box;
+    border: 1px #D9D6D6;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+.newsletter input[type=submit] {
+    background-color: #F6A5B5;
+    color: white;
+}
+
+.newsletter input[type=submit]:hover {
+    background-color: $accent;
+}
+
+// FOOTER
+
+.footer-social ul li a{
+    text-decoration: none;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+
+// CONTACT PAGE
+.frase{
+    display: block;
+    margin: 30px auto;
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 2rem;
+    max-width: 70%;
+    color: $accent;
+  }
+  .frase p{
+    font-size: 1rem;
+  }
+  
+  .frase h2{
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .form-container{
+    margin: 0 auto;
+  }
+  
+  .form-container form{
+    max-width: 80%;
+    padding: 15px 45px;
+    margin: 20px auto;
+    background-color: $bg-light;
+    border: 0px solid $primary;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .form-container form input, form textarea{
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .form-container form input[type=submit]{
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    height: fit-content;
+    margin-top: 20px;
+    background-color: $primary;
+    border: 0px solid $primary;
+    border-radius: 20px;
+    color: $bg-light;
+  }
+  
+  .form-container form input[type=submit]:hover{
+    background-color: $accent;
+}
+
+
+// ABOUT US PAGE
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
