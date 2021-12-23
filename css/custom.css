@@ -2,7 +2,7 @@
   height: 100%;
 }
 
-.carousel-caption {
+.carousel-inner .carousel-caption {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -10,11 +10,11 @@
   text-align: center;
 }
 
-.carousel-caption h2, .carousel-caption .h2 {
+.carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
   font-size: 400%;
 }
 
-.carousel-caption p {
+.carousel-inner .carousel-caption p {
   font-size: 200%;
 }
 
@@ -46,12 +46,12 @@
   max-width: 600px;
 }
 
-.contenido1 h3, .contenido1 .h3 {
-  margin-top: 8px;
+.contenido1 .imgcontainer img, .contenido2 .imgcontainer img {
+  border-radius: 40px;
 }
 
-.imgcontainer img {
-  border-radius: 40px;
+.contenido1 h3, .contenido1 .h3 {
+  margin-top: 8px;
 }
 
 header {
@@ -142,7 +142,7 @@ header {
   text-align: center;
 }
 
-.form-container form input, form textarea {
+.form-container form input, .form-container form textarea {
   margin: 10px auto;
   display: block;
   width: 100%;
@@ -171,21 +171,21 @@ header {
   background-color: #e6899b;
 }
 
-main h1, main .h1 {
+.img-aboutus h1, .img-aboutus .h1 {
   color: #FBE6CC;
   padding-left: 20%;
 }
 
-main h3, main .h3 {
+.img-aboutus h3, .img-aboutus .h3 {
   color: #FCF8F2;
   padding-left: 20%;
 }
 
 @media only screen and (max-width: 992px) {
-  main h1, main .h1 {
+  .img-aboutus h1, .img-aboutus .h1 {
     font-size: 100%;
   }
-  main h3, main .h3 {
+  .img-aboutus h3, .img-aboutus .h3 {
     font-size: 100%;
   }
 }
