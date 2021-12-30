@@ -19,19 +19,19 @@
 }
 
 @media screen and (max-width: 992px) {
-  .carousel-caption h2, .carousel-caption .h2 {
+  .carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
     font-size: 200%;
   }
-  .carousel-caption p {
+  .carousel-inner .carousel-caption p {
     font-size: 100%;
   }
 }
 
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-  .carousel-caption h2, .carousel-caption .h2 {
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
     font-size: 300%;
   }
-  .carousel-caption p {
+  .carousel-inner .carousel-caption p {
     font-size: 150%;
   }
 }

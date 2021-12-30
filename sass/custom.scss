@@ -43,28 +43,34 @@ $navbar-light-active-color: $accent;
 
 @media screen and (max-width: 992px){
 
-    .carousel-caption{
+    .carousel-inner{
+    
+        .carousel-caption{
 
-        h2{
-            font-size: 200%;
-        }
+            h2{
+                font-size: 200%;
+            }
 
-        p{
-            font-size: 100%;
+            p{
+                font-size: 100%;
+            }
         }
     }
 }
 
-@media screen and (min-width: 993px) and (max-width: 1200px){
+@media only screen and (min-width: 993px) and (max-width: 1200px){
 
-    .carousel-caption{
+    .carousel-inner{
 
-        h2{
-            font-size: 300%;
-        }
+        .carousel-caption{
 
-        p{
-            font-size: 150%;
+            h2{
+                font-size: 300%;
+            }
+
+            p{
+                font-size: 150%;
+            }
         }
     }
 }
