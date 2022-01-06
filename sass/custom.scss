@@ -33,68 +33,88 @@ $navbar-light-color: $primary;
 $navbar-light-hover-color: $accent;
 $navbar-light-active-color: $accent;
 
+.underlineAnimation::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $accent;
+
+}
+
+.underlineAnimation:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
 
 // CAROUSEL
+.carousel{
+    max-height: 600px;
 
-.carousel-inner{
+    .carousel-inner{
 
-    img{
-        height: 100%;
-    }
+        max-height: 600px;
 
-    .carousel-caption{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        
-        h2{
-            font-size: 400%;
+        img{
+            max-height: 600px;
+            object-fit: cover;
         }
 
-        p{
-            font-size: 200%;
+        .carousel-caption{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            
+            h2{
+                font-size: 400%;
+            }
+
+            p{
+                font-size: 200%;
+            }
         }
     }
 }
 
 // MEDIA QUERIES - CAROUSEL
 
-@media screen and (max-width: 992px){
+@media screen and (min-width: 993px) and (max-width: 1200px) {
 
-    .carousel-inner{
-    
-        .carousel-caption{
+    .carousel-caption{
 
-            h2{
-                font-size: 200%;
-            }
+        h2{
+            font-size: 300%;
+        }
 
-            p{
-                font-size: 100%;
-            }
+        p{
+            font-size: 150%;
         }
     }
 }
 
-@media only screen and (min-width: 993px) and (max-width: 1200px){
+@media screen and (max-width: 992px) {
 
-    .carousel-inner{
+    .carousel-caption{
 
-        .carousel-caption{
+        h2{
+            font-size: 200%;
+        }
 
-            h2{
-                font-size: 300%;
-            }
-
-            p{
-                font-size: 150%;
-            }
+        p{
+            font-size: 100%;
         }
     }
 }
+
 
 // CONTENIDO
+
+.backgroundPattern{
+    background-color: $bg-light;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 90 90'%3E%3Ccircle fill='%23F6A5B5' cx='45' cy='45' r='5'/%3E%3Cg fill='%2381676A' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='5'/%3E%3Ccircle cx='90' cy='90' r='5'/%3E%3Ccircle cx='90' cy='0' r='5'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
 
 %contenido{
     h3{
@@ -107,8 +127,22 @@ $navbar-light-active-color: $accent;
     max-width: 600px;
     }
 
-    .imgcontainer img{
+    .zoomEffect{
+        overflow: hidden;
         border-radius: 40px;
+        width: fit-content;
+        margin: 0 auto;
+
+
+        &:hover img{
+            transform: scale(1.5);
+        }
+
+        img{
+            border-radius: 40px;
+            transform-origin: 80% 50%;
+            transition: transform 1s, filter .5s ease-out;
+        }
     } 
 
 };
@@ -123,56 +157,123 @@ $navbar-light-active-color: $accent;
 }
 
 
+
+
 // HEADER
 
 header{
     background-color: $primary;
+};
+
+.caja{
+    justify-content: space-evenly;
+    vertical-align: middle;
+
+    img{
+        width: 10%;
+        filter: invert(85%) sepia(2%) saturate(733%) hue-rotate(347deg) brightness(116%) contrast(97%);
+    }
+
+    .quotationMarkDown{
+        transform: scale(-1,-1);
+    }
 }
 
-//NEWSLETTER
+@media only screen and (max-width: 645px) {
+    .quotationMarkDown{
+        margin-left: 80%;
+    }
+
+    .quotationMarkUp{
+        margin-right: 80%;
+    }
+}
+
+// NEWSLETTER
 
 .highlight-text{
     color: $primary;
 }
 
 .newsletter{
-    @include sizes(100%, 100%);
-    position: relative;
-    display: inline-block;
-    padding: 20px 0px;
-    margin: 0 auto;
-    z-index: 11;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: $bg-light;
 
-    form{
-        margin: 0px auto;
-        max-width: 600px;
+    max-width: 850px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    text-align: left;
+
+
+    &__img {
+        width: 40%;
+
+        img {
+            width: 200px;
+        }
     }
 
-    p{
-        font-size: 36px;
-        text-align: center;
+    &__content {
+        width: 60%;
     }
 
-    input{
-        float: left;
-        padding: 15px 20px;
-        margin: 30px 10px;
-        box-sizing: border-box;
-        border: 1px #D9D6D6;
-        background-color: #F2F2F2;
-        border-radius: 20px;
-        font-size: 28px;
+    &__text {
+        font-size: 18px;
     }
 
-    input[type=submit]{
-        background-color: #F6A5B5;
-        color: white;
+    &__input{
+        outline: none;
+        border: 2px solid rgb(150, 150, 150);
+        border-radius: 0.4em;
+        width: 80%;
+
+    }
+
+    &__button{
+        border: 2px solid $primary;
+        border-radius: 0.4em;
+        background-color: $primary;
+        color: $bg-light;
+        width: 80%;
+        margin: 5px 0;
+        overflow: hidden;
+
+        box-shadow: inset 0 0 0 0 $accent;
+        transition: ease-out 0.3s;
 
         &:hover{
-            background-color: $accent;
+            box-shadow: inset 850px 0 0 0 $accent;
+            border: 2px solid $accent;
         }
-    } 
+    }
+
 }
+
+@media screen and (max-width: 600px) {
+	.newsletter {
+        &__img img{
+            width: 100px;
+            padding: 10px;
+        }
+        &__content{
+            text-align: center;
+        }
+
+
+		&__img,
+		&__content,
+		&__input,
+		&__button {
+			width: 100%;
+		}
+	}
+}
+
 
 // FOOTER
 
@@ -269,5 +370,7 @@ header{
         }
     }
 }
+
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 

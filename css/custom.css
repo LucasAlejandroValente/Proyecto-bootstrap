@@ -14,11 +14,35 @@
   font-weight: 700;
 }
 
-.carousel-inner img {
-  height: 100%;
+.underlineAnimation::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #e6899b;
 }
 
-.carousel-inner .carousel-caption {
+.underlineAnimation:hover::after {
+  width: 100%;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.carousel {
+  max-height: 600px;
+}
+
+.carousel .carousel-inner {
+  max-height: 600px;
+}
+
+.carousel .carousel-inner img {
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel .carousel-inner .carousel-caption {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -26,30 +50,36 @@
   text-align: center;
 }
 
-.carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
+.carousel .carousel-inner .carousel-caption h2, .carousel .carousel-inner .carousel-caption .h2 {
   font-size: 400%;
 }
 
-.carousel-inner .carousel-caption p {
+.carousel .carousel-inner .carousel-caption p {
   font-size: 200%;
 }
 
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .carousel-caption h2, .carousel-caption .h2 {
+    font-size: 300%;
+  }
+  .carousel-caption p {
+    font-size: 150%;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  .carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
+  .carousel-caption h2, .carousel-caption .h2 {
     font-size: 200%;
   }
-  .carousel-inner .carousel-caption p {
+  .carousel-caption p {
     font-size: 100%;
   }
 }
 
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-  .carousel-inner .carousel-caption h2, .carousel-inner .carousel-caption .h2 {
-    font-size: 300%;
-  }
-  .carousel-inner .carousel-caption p {
-    font-size: 150%;
-  }
+.backgroundPattern {
+  background-color: #FCF8F2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 90 90'%3E%3Ccircle fill='%23F6A5B5' cx='45' cy='45' r='5'/%3E%3Cg fill='%2381676A' fill-opacity='1'%3E%3Ccircle cx='0' cy='90' r='5'/%3E%3Ccircle cx='90' cy='90' r='5'/%3E%3Ccircle cx='90' cy='0' r='5'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
 }
 
 .contenido1 h3, .contenido2 h3, .contenido1 .h3, .contenido2 .h3 {
@@ -62,8 +92,28 @@
   max-width: 600px;
 }
 
-.contenido1 .imgcontainer img, .contenido2 .imgcontainer img {
+.contenido1 .zoomEffect, .contenido2 .zoomEffect {
+  overflow: hidden;
   border-radius: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.contenido1 .zoomEffect:hover img, .contenido2 .zoomEffect:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.contenido1 .zoomEffect img, .contenido2 .zoomEffect img {
+  border-radius: 40px;
+  -webkit-transform-origin: 80% 50%;
+          transform-origin: 80% 50%;
+  -webkit-transition: -webkit-transform 1s, -webkit-filter .5s ease-out;
+  transition: -webkit-transform 1s, -webkit-filter .5s ease-out;
+  transition: transform 1s, filter .5s ease-out;
+  transition: transform 1s, filter .5s ease-out, -webkit-transform 1s, -webkit-filter .5s ease-out;
 }
 
 .contenido1 {
@@ -74,49 +124,111 @@ header {
   background-color: #F6A5B5;
 }
 
+.caja {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  vertical-align: middle;
+}
+
+.caja img {
+  width: 10%;
+  -webkit-filter: invert(85%) sepia(2%) saturate(733%) hue-rotate(347deg) brightness(116%) contrast(97%);
+          filter: invert(85%) sepia(2%) saturate(733%) hue-rotate(347deg) brightness(116%) contrast(97%);
+}
+
+.caja .quotationMarkDown {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+@media only screen and (max-width: 645px) {
+  .quotationMarkDown {
+    margin-left: 80%;
+  }
+  .quotationMarkUp {
+    margin-right: 80%;
+  }
+}
+
 .highlight-text {
   color: #F6A5B5;
 }
 
 .newsletter {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  padding: 20px 0px;
-  margin: 0 auto;
-  z-index: 11;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: #FCF8F2;
+  max-width: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
 }
 
-.newsletter form {
-  margin: 0px auto;
-  max-width: 600px;
+.newsletter__img {
+  width: 40%;
 }
 
-.newsletter p {
-  font-size: 36px;
-  text-align: center;
+.newsletter__img img {
+  width: 200px;
 }
 
-.newsletter input {
-  float: left;
-  padding: 15px 20px;
-  margin: 30px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px #D9D6D6;
-  background-color: #F2F2F2;
-  border-radius: 20px;
-  font-size: 28px;
+.newsletter__content {
+  width: 60%;
 }
 
-.newsletter input[type=submit] {
+.newsletter__text {
+  font-size: 18px;
+}
+
+.newsletter__input {
+  outline: none;
+  border: 2px solid #969696;
+  border-radius: 0.4em;
+  width: 80%;
+}
+
+.newsletter__button {
+  border: 2px solid #F6A5B5;
+  border-radius: 0.4em;
   background-color: #F6A5B5;
-  color: white;
+  color: #FCF8F2;
+  width: 80%;
+  margin: 5px 0;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 0 0 0 #e6899b;
+          box-shadow: inset 0 0 0 0 #e6899b;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 
-.newsletter input[type=submit]:hover {
-  background-color: #e6899b;
+.newsletter__button:hover {
+  -webkit-box-shadow: inset 850px 0 0 0 #e6899b;
+          box-shadow: inset 850px 0 0 0 #e6899b;
+  border: 2px solid #e6899b;
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter__img img {
+    width: 100px;
+    padding: 10px;
+  }
+  .newsletter__content {
+    text-align: center;
+  }
+  .newsletter__img, .newsletter__content, .newsletter__input, .newsletter__button {
+    width: 100%;
+  }
 }
 
 .footer-social ul li a {

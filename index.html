@@ -28,19 +28,19 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active underlineAnimation" aria-current="page" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/catalogue.html">Nuestras tortas</a>
+              <a class="nav-link underlineAnimation" href="./pages/catalogue.html">Nuestras tortas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/aboutus.html">Sobre nosotros</a>
+              <a class="nav-link underlineAnimation" href="./pages/aboutus.html">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/aboutus.html">Dónde encontrarnos</a>
+              <a class="nav-link underlineAnimation" href="./pages/aboutus.html">Dónde encontrarnos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/order.html">Ordenar</a>
+              <a class="nav-link underlineAnimation" href="./pages/order.html">Ordenar</a>
             </li>
           </ul>
       </div>
@@ -66,8 +66,8 @@
           <img src="./images/home2.png" class="d-block w-100" alt="Torta">
           <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
             <div class="container position-absolute top-50 start-50 translate-middle p-3">
-              <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-              <p>Nunc luctus tortor a felis cursus pulvinar. Maecenas dignissim eu nulla et sodales</p>
+              <h2>Pastelería de calidad.</h2>
+              <p>Diseños elegantes hechos especialmente para ti, ahora más fáciles de ordenar que nunca. </p>
             </div>
           </div>
         </div>
@@ -75,8 +75,8 @@
           <img src="./images/home3.png" class="d-block w-100" alt="Torta">
           <div class="carousel-caption d-none d-md-block bg-light bg-opacity-50">
             <div class="container position-absolute top-50 start-50 translate-middle p-3">
-              <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-              <p>Nunc luctus tortor a felis cursus pulvinar. Maecenas dignissim eu nulla et sodales</p>
+              <h2>Cada torta es única.</h2>
+              <p>Ofrecemos tortas clásicas y de diseño, y también tortas veganas y libres de gluten.</p>
           </div>
           </div>
         </div>
@@ -94,49 +94,66 @@
     <header class="row w-100 m-0">
       <div class="container-fluid">
         <div class=" cartel mx-auto my-5 text-center">
-          <div class="caja">
-            <h3 class="p-3 text-light">Las mejores tortas que el dinero puede comprar.</h3>
+          <div class="caja d-flex flex-wrap align-items-center">
+            <img class="quotationMarkUp"src="./images/quotation-marks-svgrepo-com.svg" alt="quotation mark">
+            <h3 class="text-light py-2 my-2">Las mejores tortas que el dinero puede comprar.</h3>
+            <img class="quotationMarkDown" src="./images/quotation-marks-svgrepo-com.svg" alt="quotation mark">
           </div>
         </div>
       </div>
     </header>
 
-    <main class="row mx-2 my-5">
+    <main class=" backgroundPattern row m-0 px-2 py-5 w-100">
       <div class="col-md-6 contenido1">
         <div class="imgandcaption text-center">
           <div class="imgcontainer">
-              <img class="img-fluid" src="./images/display2.jpg" alt="Porción de torta" width="600px">
+            <div class="zoomEffect mb-2">
+              <img class="img-fluid shadow-sm" src="./images/display2.jpg" alt="Torta de chocolate" width="600px">
+            </div>
           </div>
-          <h3 class="d-inline-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+          <h3 class="d-inline-block shadow-sm px-3 py-2">Vos lo soñás, nosotros lo horneamos.</h3>
         </div>
       </div>
       
       <div class="col-md-6 contenido2">          
         <div class="imgandcaption text-center">
-          <h3 class="d-inline-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-          <div class="imgcontainer">
-              <img class="img-fluid" src="./images/display1.jpg" alt="Torta de chocolate" width="600px">
+          <h3 class="d-inline-block shadow-sm px-3 py-2">Postres elaborados con amor.</h3>
+          <div class="imgcontainer text-center">
+            <div class="zoomEffect">
+              <img class="img-fluid shadow-sm" src="./images/display1.jpg" alt="Torta de chocolate" width="600px">
+            </div>
           </div>
         </div>
       </div>
     </main>
 
-    <section>
-      <form class=" w-80 mx-auto newsletter text-center" action="#">
-              <div>
-                  <p>Suscribite a nuestra Newsletter para recibir todas las <span class="highlight-text">novedades</span>  y <span class="highlight-text">ofertas especiales</span></p>
-              </div>
-              <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
-                  <input type="email" required placeholder="Correo electrónico" name="mail" required>
-                  <input type="submit" value="Suscribirse">
-              </div>
-      </form>
+  <section>
+    <div class="bg-primary py-2">
+      <div class="newsletter rounded-3 shadow py-4" action="#">
+        <div class="newsletter__img text-center">
+          <img src="./images/cake-slice.png" alt="Porción de torta">
+        </div>
+
+        <div class="newsletter__content">      
+          <div class="newsletter__text">
+            <p>Suscribite a nuestra <span class="fw-bold">Newsletter</span> para recibir todas las <span class="highlight-text fw-semi-bold">novedades</span>  y <span class="highlight-text fw-semi-bold">ofertas especiales</span>.</p>
+          </div>
+          
+          <div>
+            <form>
+                <input class="newsletter__input" type="email" required placeholder="Correo electrónico" name="mail" required>
+                <input class="newsletter__button" type="submit" value="Suscribirse">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer class="bg-secondary m-0 w-100">
     <div class="footer-slogan d-flex justify-content-center flex-wrap align-items-center">
       <div class="flex-shrink-0">
-        <a href="/index.html"><img src="./images/logo-marron.png" alt="Logo" width="150px"></a>
+        <a href="/index.html"><img class="p-1" src="./images/logo-marron.png" alt="Logo" width="150px"></a>
       </div>
       <div class="flex-grow-1 ms-3 text-center text-md-start text-info"><h4>Las mejores tortas que el dinero puede comprar.</h4> </div>
     
@@ -144,8 +161,8 @@
 
     <div class="row m-0 footer-social">
       <ul class="nav justify-content-center justify-content-md-end px-5 flex-nowrap text-info">
-          <li><a class="text-reset" href="#">Instagram</a></li>
-          <li><a class="text-reset" href="#">Facebook</a></li>
+          <li><a class="text-reset" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="text-reset" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li><a class="text-reset" href="./pages/contact.html">Contáctanos</a></li>
       </ul>
      </div>
@@ -153,9 +170,9 @@
   </footer>
 
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   </body>
 
