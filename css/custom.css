@@ -59,19 +59,19 @@
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-  .carousel-caption h2, .carousel-caption .h2 {
+  .carousel .carousel-inner .carousel-caption h2, .carousel .carousel-inner .carousel-caption .h2 {
     font-size: 300%;
   }
-  .carousel-caption p {
+  .carousel .carousel-inner .carousel-caption p {
     font-size: 150%;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .carousel-caption h2, .carousel-caption .h2 {
+  .carousel .carousel-inner .carousel-caption h2, .carousel .carousel-inner .carousel-caption .h2 {
     font-size: 200%;
   }
-  .carousel-caption p {
+  .carousel .carousel-inner .carousel-caption p {
     font-size: 100%;
   }
 }
@@ -299,23 +299,271 @@ header {
   background-color: #e6899b;
 }
 
-.img-aboutus h1, .img-aboutus .h1 {
+.aboutus {
+  background-image: url(../images/aboutus/red-velvet-cake.png);
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.aboutus .aboutus_inner .aboutus_title {
   color: #FBE6CC;
-  padding-left: 20%;
+  font-size: 8vw;
+  font-style: italic;
+  font-weight: 700;
+  z-index: 2;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.img-aboutus h3, .img-aboutus .h3 {
+.nuestroEquipo .nuestroEquipo_inner {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card {
+  background-color: #F6A5B5;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card:nth-of-type(odd) {
+  background-color: #e6899b;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card:hover {
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  margin: 20px 40px;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_img {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_img img {
+  border: 2px solid #FCF8F2;
+  border-radius: 50%;
+}
+
+.nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_content {
   color: #FCF8F2;
-  padding-left: 20%;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 150%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-@media only screen and (max-width: 992px) {
-  .img-aboutus h1, .img-aboutus .h1 {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .nuestroEquipo .nuestroEquipo_inner {
+    padding: 25px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card {
+    margin: 5px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card:hover {
+    margin: 10px 20px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_img {
+    height: 120px;
+    width: 120px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_content {
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nuestroEquipo .nuestroEquipo_inner {
+    padding: 20px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card {
+    margin: 5px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card:hover {
+    margin: 10px 20px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_img {
+    height: 100px;
+    width: 100px;
+  }
+  .nuestroEquipo .nuestroEquipo_inner .nuestroEquipo_card .nuestroEquipo_content {
     font-size: 100%;
   }
-  .img-aboutus h3, .img-aboutus .h3 {
-    font-size: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .nuestroEquipo_card:hover {
+    -webkit-transform: none;
+            transform: none;
+    margin: inherit;
   }
+}
+
+#dondeEncontrarnos .aboutus {
+  background-image: url(../images/aboutus/dondeEncontrarnos.jpg);
+}
+
+#dondeEncontrarnos .aboutus_inner .aboutus_title {
+  color: #FCF8F2;
+}
+
+.dondeEncontrarnos {
+  margin: 40px;
+}
+
+.dondeEncontrarnos_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #81676A;
+}
+
+.dondeEncontrarnos_text h5, .dondeEncontrarnos_text .h5 {
+  font-weight: 600;
+  font-size: 300%;
+}
+
+.dondeEncontrarnos_text a {
+  text-decoration: none;
+  color: #81676A;
+  font-size: 150%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.dondeEncontrarnos_text a:hover {
+  color: #81676A;
+  text-shadow: 1px 1px 0 #bcabad;
+  -webkit-transform: translate(-3px, -3px);
+          transform: translate(-3px, -3px);
+}
+
+.dondeEncontrarnos_text p {
+  font-size: 150%;
+}
+
+.dondeEncontrarnos_horarios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dondeEncontrarnos_horarios h6, .dondeEncontrarnos_horarios .h6 {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 150%;
+  color: #81676A;
+}
+
+.dondeEncontrarnos_horarios .table_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #81676A;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.dondeEncontrarnos_horarios .table_container table {
+  color: #81676A;
+  font-size: 125%;
+  width: 100%;
+}
+
+.dondeEncontrarnos_horarios .location_btn {
+  width: 70%;
+}
+
+.dondeEncontrarnos_horarios .location_btn button {
+  width: 100%;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: 600;
+  border: 2px solid #FBE6CC;
+  border-radius: 20px;
+  background-color: #81676A;
+  color: #FBE6CC;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.dondeEncontrarnos_horarios .location_btn button:hover {
+  color: #81676A;
+  background-color: #FBE6CC;
+  border-color: #81676A;
+}
+
+@media screen and (max-width: 768px) {
+  .dondeEncontrarnos .dondeEncontrarnos_horarios .table_container, .dondeEncontrarnos .dondeEncontrarnos_horarios .location_btn {
+    width: 100%;
+  }
+}
+
+.dondeEncontrarnos_map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 400px;
 }
 
 /*!
