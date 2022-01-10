@@ -14,6 +14,15 @@
   font-weight: 700;
 }
 
+.heroImage-contact, #catalogueMain .heroImage-catalogue {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .underlineAnimation::after {
   content: "";
   display: block;
@@ -237,18 +246,12 @@ header {
   margin: 0px 20px;
 }
 
-.heroImage {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
+.heroImage-contact {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0.5)), to(rgba(255, 255, 255, 0.4))), url(../images/contact-hero.jpg);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%, rgba(255, 255, 255, 0.4)), url(../images/contact-hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-.heroImage .heroImage_box {
+.heroImage-contact .heroImage-contact_box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -258,7 +261,7 @@ header {
   text-align: center;
 }
 
-.heroImage .heroImage_box h1, .heroImage .heroImage_box .h1 {
+.heroImage-contact .heroImage-contact_box h1, .heroImage-contact .heroImage-contact_box .h1 {
   font-size: 72px;
   font-weight: 200;
   color: #FCF8F2;
@@ -745,6 +748,172 @@ header {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 100vh;
+}
+
+#catalogueMain .heroImage-catalogue {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgba(0, 0, 0, 0.5)), to(rgba(255, 255, 255, 0.4))), url(../images/catalogue/red-velvet-cake-g8461fc280_1920.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%, rgba(255, 255, 255, 0.4)), url(../images/catalogue/red-velvet-cake-g8461fc280_1920.jpg);
+  background-position: 60%;
+}
+
+#catalogueMain .heroImage-catalogue .heroImage-catalogue_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: center;
+}
+
+#catalogueMain .heroImage-catalogue .heroImage-catalogue_box h1, #catalogueMain .heroImage-catalogue .heroImage-catalogue_box .h1 {
+  font-size: 72px;
+  font-weight: 200;
+  color: #FCF8F2;
+}
+
+#catalogueMain .heroImage-catalogue .heroImage-catalogue_box h2, #catalogueMain .heroImage-catalogue .heroImage-catalogue_box .h2 {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  color: #F6A5B5;
+}
+
+#catalogueMain .catalogue_header {
+  height: 150px;
+  background-color: #F6A5B5;
+}
+
+#catalogueMain .catalogue_header h3, #catalogueMain .catalogue_header .h3 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+#catalogueMain .catalogue_content .catalogue_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img {
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: .8;
+  background-color: #F6A5B5;
+  z-index: 1;
+  -webkit-transition: width .5s, height .5s;
+  transition: width .5s, height .5s;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img:hover span {
+  width: 300%;
+  height: 300%;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img:hover .img_description div {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .catalogue_imgcontainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .catalogue_imgcontainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .img_description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .img_description div {
+  padding: 40px;
+  color: #FCF8F2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .img_description div h4, #catalogueMain .catalogue_content .catalogue_container .catalogue_img .img_description div .h4 {
+  font-size: 200%;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#catalogueMain .catalogue_content .catalogue_container .catalogue_img .img_description div p {
+  font-size: 175%;
+}
+
+@media screen and (max-width: 768px) {
+  #catalogueMain .catalogue_content .catalogue_container .catalogue_img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #catalogueMain .heroImage-catalogue .heroImage-catalogue_box h1, #catalogueMain .heroImage-catalogue .heroImage-catalogue_box .h1 {
+    font-size: 60px;
+  }
+  #catalogueMain .heroImage-catalogue .heroImage-catalogue_box h2, #catalogueMain .heroImage-catalogue .heroImage-catalogue_box .h2 {
+    font-size: 28px;
+  }
 }
 
 /*!

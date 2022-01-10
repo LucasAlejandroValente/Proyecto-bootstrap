@@ -52,6 +52,104 @@
     </div>
   </nav>
 
+  <main id="catalogueMain">
+    <div class="heroImage-catalogue">
+      <div class="heroImage-catalogue_box">
+        <h1>Probá nuestra especialidad</h1>
+        <h2>Red Velvet Cake</h2>
+      </div>
+    </div>
+    <div class="catalogue_header d-flex align-items-center justify-content-center">
+      <h3>Menú</h3>
+    </div>
+    <div class="catalogue_content p-3 backgroundPattern">
+      <div class="catalogue_container">
+
+        <div class="catalogue_img shadow">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/red-velvet-cake-500x500jpg.jpg" alt="Red Velvet Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Red Velvet Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue_img shadow">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/rainbowcake/rainbowcake_3.jpg" alt="Rainbow Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Rainbow Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue_img">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/oreocake/oreocake.png" alt="Oreo Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Oreo Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue_img">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/carrotcake/carrotcake.jpg" alt="Carrot Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Carrot Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue_img">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/coconutcake/coconutcake.jpg" alt="Coconut Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Coconut Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue_img">
+          <span></span>
+          <div class="catalogue_imgcontainer">
+            <img src="../images/catalogue/peanutcake/peanutbuttercake.jpg" alt="Peanut Butter Cake">
+          </div>
+          <div class="img_description">
+            <div>
+              <h4>Peanut Butter Cake</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+        
+
+    <div class="catalogue_header"></div>
+  </main>
+
   <footer class="bg-secondary m-0 w-100">
     <div class="footer-slogan d-flex justify-content-center flex-wrap align-items-center">
       <div class="flex-shrink-0">
@@ -70,6 +168,24 @@
      </div>
     <div class="row m-0 copyright border-top border-dark"><p class="text-end">© Red Velvet Bakery 2021. Todos los derechos reservados. </p></div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+      $(document).ready(function(){
+          $('.catalogue_img').on('mouseenter', function(e){
+              x = e.pageX - $(this).offset().left,
+              y = e.pageY - $(this).offset().top;
+              $(this).find('span').css({top:y, left:x})
+          })
+
+          $('.catalogue_img').on('mouseout', function(e){
+              x = e.pageX - $(this).offset().left,
+              y = e.pageY - $(this).offset().top;
+              $(this).find('span').css({top:y, left:x})
+          })
+      })
+  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
