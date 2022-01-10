@@ -52,40 +52,46 @@
     </div>
   </nav>
 
-    <main id="#contact">
+  <main>
+    <div class="heroImage">
+      <div class="heroImage_box">
+        <h1>Ponte en contacto con nosotros</h1>
+      </div>
+    </div>
 
-        <div class="frase">
-            <h2>Ponete en contacto con nuestro equipo</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non facilis mollitia consectetur blanditiis minus amet excepturi, cupiditate est, laudantium consequatur, incidunt nemo pariatur reiciendis ea quae delectus! Illo, nam accusamus.</p>
-        </div>
+    <section class="form_section backgroundPattern">
+      <div class="form_heading">
+        <h2>Completa el siguiente formulario para enviarnos un E-mail. También podés llamarnos a <a class="underlineAnimation_light" href="#">11 1234-5678</a></h2>
+      </div>
 
-    <section>
-        <article>
-            <div class="form-container">
-                <div>
-                    <form action="#">
+      <div class="form_container">
+          <form action="#" class="shadow">
+            <div class="info">
+              <fieldset>
+                
+                <label for="nombre">Nombre <abbr title="required" aria-label="required">*</abbr> </label>
+                <input type="text" placeholder="Escribe tu nombre aquí..." id="nombre" required>
 
-                            <label for="Nombre">Nombre</label>
-                            <input type="text" required placeholder="Nombre">
+                <label for="apellido">Apellido <abbr title="required" aria-label="required">*</abbr> </label>
+                <input type="text" id="apellido" required>
 
-                            <label for="Apellido">Apellido</label>
-                            <input type="text" required placeholder="Apellido">
+                <label for="email">Correo electrónico <abbr title="required" aria-label="required">*</abbr> </label>
+                <input type="email" placeholder="Dinos cómo contactarte de vuelta..." id="email" required>
 
-                            <label for="Correo electrónico">Correo electrónico</label>
-                            <input type="email" required placeholder="Correo electrónico" name="email">
-
-                            <label for="Escribe tu mensaje">Mensaje</label>
-                            <textarea placeholder="Escribe tu mensaje"></textarea>
-
-                            <input type="submit" value="Enviar">
-
-                    </form>
-                </div>
+                <label for="tel">Número de teléfono</label>
+                <input type="tel" id="tel">              
+                
+                <label for="msg">Mensaje <abbr title="required" aria-label="required">*</abbr></label>
+                <textarea rows="4" id="msg" placeholder="Lo que quieres decirnos..." required></textarea>
+             </fieldset>
             </div>
-        </article>
-    </section>
 
-    </main>
+            <button type="submit">Enviar</button>
+          </form>
+      </div>
+      <div class="form_heading"></div>
+    </section>
+  </main>
 
     <footer class="bg-secondary m-0 w-100">
       <div class="footer-slogan d-flex justify-content-center flex-wrap align-items-center">
