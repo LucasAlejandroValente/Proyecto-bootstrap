@@ -61,9 +61,58 @@
         </ul>
     </div>
   </nav>
-  <main class="row no-gutters m-0">
-    <div class="col-sm-6 p-0"><img class="img-fluid" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Persona amasando"></div>
-    <div class="col-sm-6 bg-primary d-flex align-items-center justify-content-center"><h1 class="text-center text-light">Todavía lo estamos preparando!</h1></div>
+  <main id="orderMain">
+    <div class="heroImage-order">
+      <div class="heroImage-order_box">
+        <h1>Hacé tu pedido aquí</h1>
+      </div>
+    </div>
+    <section class="orderForm row m-0 p-0">
+      <div class="form_container">
+        <form action="#">
+            <div class="row">
+            <div class="col-md-6">
+              <label for="nombre">Nombre <abbr title="required" aria-label="required">*</abbr> </label>
+              <input type="text" placeholder="Escribe tu nombre aquí..." id="nombre" required>
+
+              <label for="apellido">Apellido <abbr title="required" aria-label="required">*</abbr> </label>
+              <input type="text" id="apellido" required>
+
+              <label for="tel">Número de teléfono <abbr title="required" aria-label="required">*</abbr> </label>
+              <input type="tel" placeholder="Dinos cómo contactarte de vuelta..." id="tel" required>
+
+              <div class="form_radial py-3">
+                <p>¿Delivery o take away?</p>
+                <div class="form_radial_input">
+                  <input type="radio" id="option1"
+                  name="contact" value="takeaway">
+                  <label for="option1">Take Away</label>
+            
+                  <input type="radio" id="option2"
+                  name="contact" value="delivery">
+                  <label for="option1">Delivery</label>
+                </div>
+              </div>              
+
+              <label for="nombre">Dirección</label>
+              <input type="text" placeholder="Danos tu dirección si es necesario." id="nombre" required>
+
+              <label for="msg">Pedido <abbr title="required" aria-label="required">*</abbr></label>
+              <textarea rows="4" id="msg" placeholder="Describí tu pedido" required></textarea>
+
+              <button type="submit">Enviar pedido</button>
+            </div>
+            <div class="col-md-6">
+              <div class="text-center d-flex justify-content-center">
+              <img class="img-fluid"src="../images/logo-rosa.png" alt="Red Velvet Bakery Logo">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      </form>
+    </section>
+
   </main>
 
   <footer class="bg-secondary m-0 w-100">
